@@ -7,21 +7,32 @@ import model.Funcionario;
 public class FolhaPG {
 	public static void main(String args[]) {
 		Scanner teclado = new Scanner(System.in);
-		Funcionario f1, f2, f3;
 		
-		f1 = new Funcionario(1, "Isidro", "Professor", 80.0, 100);
-		f2 = new Funcionario(2, "Pedro ", "Gerente  ", 100.0, 70);
-		f3 = new Funcionario(Integer.parseInt(teclado.nextLine()),     // numFuncional é INT (tenho q converter)
-				             teclado.nextLine(),                       // nome é STRING
-				             teclado.nextLine(),       				   // cargo é STRING
-				             Double.parseDouble(teclado.nextLine()),   // valorHora é DOUBLE (tenho q converter)
-				             Integer.parseInt(teclado.nextLine()));    // numHoras é INT (tenho q converter)
+		Funcionario lista[];   // aqui eu tenho a possibilidade de criar uma lista de funcionarios
 		
-		System.out.println("Folha de Pagamento");
-		System.out.println(f1.getNumFuncional() + " | "+f1.getNome()+" | "+f1.calcularSalarioBruto()+ " | "+f1.calcularImposto()+" | "+f1.calcularSalarioLiquido());
-		System.out.println(f2.getNumFuncional() + " | "+f2.getNome()+" | "+f2.calcularSalarioBruto()+ " | "+f2.calcularImposto()+" | "+f2.calcularSalarioLiquido());
-		System.out.println(f3.getNumFuncional() + " | "+f3.getNome()+" | "+f3.calcularSalarioBruto()+ " | "+f3.calcularImposto()+" | "+f3.calcularSalarioLiquido());
-		teclado.close();
+		// toda lista (array ou vetor) é um conjunto de variáveis do mesmo tipo que estão na memória
+		// 2 características -> precisam ter tamanho fixo 
+		//                      começam da posição 0
+		
+		lista = new Funcionario[35];  // eu estou aqui criando uma lista de 10 referências para
+		                              // a classe Funcionario. É como se eu tivesse as seguintes
+									  // variaveis: lista0, lista1, lista2, lista3... lista9
+		
+		
+		// vou "simular" uma recuperação do banco
+		for (int pos=0; pos<lista.length; pos++) {
+			lista[pos] = new Funcionario((pos+1), "Funcionario"+pos, "Analista",(10 * (pos+1)), 80+(pos+1)*2);
+		}
+		
+		// vamos então mostrar a folha de pagamento inteira!!!
+		for (int pos = 0; pos < lista.length; pos++) {
+			System.out.printf("%4d %-20s %-20s R$ %9.2f   R$ %9.2f    R$ %9.2f\n", lista[pos].getNumFuncional(),
+					                                                          lista[pos].getNome(),
+					                                                          lista[pos].getCargo(),
+					                                                          lista[pos].calcularSalarioBruto(),
+					                                                          lista[pos].calcularImposto(),
+					                                                          lista[pos].calcularSalarioLiquido());
+		}
 	}
 
 }
