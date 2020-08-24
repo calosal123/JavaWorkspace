@@ -31,7 +31,4 @@ public class ContaEspecial extends Conta {
 				+ numConta + ", saldo=" + saldo + "]";
 	}
 	
-	
-	
-	
 }
