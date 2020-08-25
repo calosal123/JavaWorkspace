@@ -11,7 +11,7 @@ import model.Horista;
 public class FolhaDePagamento {
 	public static void main(String args[]) {
 		
-		Funcionario lista[] = new Funcionario[10];
+		Funcionario lista[] = new Funcionario[10]; // tamanho fixo e pré-definido
 		
 		lista[0] = new Chefe(1,"Jose Almeida", 3500f, 15f, 850f);
 		lista[1] = new Empreiteiro(2, "Ana Pires", 5000f);
@@ -23,6 +23,7 @@ public class FolhaDePagamento {
 		lista[7] = new Administrativo(8, "Joao Maldonado", 4000f, 400f, 650f);
 		lista[8] = new Administrativo(9, "Marcelo Moreira", 3700f, 350f, 650f);
 		lista[9] = new Comissionado(10, "Felipe Cunha", 2000f, 22f);
+
 		
 		InterfaceBD ibd;
 		
