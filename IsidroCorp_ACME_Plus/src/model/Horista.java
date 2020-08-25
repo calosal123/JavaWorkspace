@@ -1,15 +1,6 @@
 package model;
 
-import datainterface.InterfaceBD;
-
-public class Horista extends Funcionario{
-
-	@Override
-	public String toString() {
-		return "Horista [valorHora=" + valorHora + ", numeroHoras=" + numeroHoras + ", numRegistro=" + numRegistro
-				+ ", nome=" + nome + "]";
-	}
-
+public class Horista extends Funcionario {
 
 	private float valorHora;
 	private int   numeroHoras;
@@ -47,23 +38,6 @@ public class Horista extends Funcionario{
 	public void setNumeroHoras(int numeroHoras) {
 		this.numeroHoras = numeroHoras;
 	}
-
-	@Override
-	public void salvarNoBanco() {
-		System.out.println("SALVANDO NO BANCO O OBJETO HORISTA");
-		System.out.println("BD="+toString());
-		
-	}
-
-
-	@Override
-	public void recuperarDoBanco() {
-		// TODO Auto-generated method stub
-		
-	}
-	
-
-
 	
 	
 

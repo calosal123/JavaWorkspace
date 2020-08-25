@@ -1,8 +1,6 @@
 package model;
 
-import datainterface.InterfaceBD;
-
-public abstract class Funcionario implements InterfaceBD{
+public abstract class Funcionario{
 	
 	protected int    numRegistro;
 	protected String nome;
@@ -31,11 +29,8 @@ public abstract class Funcionario implements InterfaceBD{
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
+	
+	
+	
 
-	public void salvarNoBanco() {
-		System.out.println("TILT-------------");
-	}
-	public void recuperarDoBanco() {
-		
-	}
 }

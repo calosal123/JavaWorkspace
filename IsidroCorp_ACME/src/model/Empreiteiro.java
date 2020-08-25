@@ -1,6 +1,8 @@
 package model;
 
-public class Empreiteiro extends Funcionario {
+import datainterface.InterfaceBD;
+
+public class Empreiteiro extends Funcionario{
 	private float valorEmpreita;
 
 	
@@ -24,6 +26,26 @@ public class Empreiteiro extends Funcionario {
 
 	public void setValorEmpreita(float valorEmpreita) {
 		this.valorEmpreita = valorEmpreita;
+	}
+
+
+	@Override
+	public String toString() {
+		return "Empreiteiro [valorEmpreita=" + valorEmpreita + ", numRegistro=" + numRegistro + ", nome=" + nome + "]";
+	}
+
+
+	@Override
+	public void salvarNoBanco() {
+		System.out.println("SALVANDO NO BANCO O OBJETO EMPREITEIRO");
+		System.out.println("BD="+toString());
+	}
+
+
+	@Override
+	public void recuperarDoBanco() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 

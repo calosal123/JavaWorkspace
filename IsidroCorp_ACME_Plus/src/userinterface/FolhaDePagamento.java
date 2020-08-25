@@ -1,6 +1,5 @@
 package userinterface;
 
-import datainterface.InterfaceBD;
 import model.Administrativo;
 import model.Chefe;
 import model.Comissionado;
@@ -24,18 +23,11 @@ public class FolhaDePagamento {
 		lista[8] = new Administrativo(9, "Marcelo Moreira", 3700f, 350f, 650f);
 		lista[9] = new Comissionado(10, "Felipe Cunha", 2000f, 22f);
 		
-		InterfaceBD ibd;
 		
-		System.out.println("---------> Exibindo folha de pagamento <----------");
+		
 		for (int pos=0; pos < lista.length; pos++) {
 			Funcionario f = lista[pos];
 			System.out.printf("%3d %-20s %-20s R$ %7.2f\n", f.getNumRegistro(), f.getNome(), f.getClass().getSimpleName(), f.calcularSalario());
-		}
-		
-		System.out.println("---------> Gravando tudo no banco <----------");
-		for (int pos=0; pos < lista.length; pos++) {
-			ibd = lista[pos];
-			ibd.salvarNoBanco();
 		}
 	}
 

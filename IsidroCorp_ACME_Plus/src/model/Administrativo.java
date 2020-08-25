@@ -1,8 +1,6 @@
 package model;
 
-import datainterface.InterfaceBD;
-
-public class Administrativo extends Funcionario{
+public class Administrativo extends Funcionario {
 	private float salarioBase;
 	private float valeTransporte;
 	private float ticket;
@@ -44,25 +42,5 @@ public class Administrativo extends Funcionario{
 	public void setTicket(float ticket) {
 		this.ticket = ticket;
 	}
-
-	@Override
-	public String toString() {
-		return "Administrativo [salarioBase=" + salarioBase + ", valeTransporte=" + valeTransporte + ", ticket="
-				+ ticket + ", numRegistro=" + numRegistro + ", nome=" + nome + "]";
-	}
-
-	@Override
-	public void salvarNoBanco() {
-		System.out.println("SALVANDO NO BANCO O OBJETO ADMINISTRATIVO");
-		System.out.println("BD="+toString());
-		
-	}
-
-	@Override
-	public void recuperarDoBanco() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 
 }

@@ -1,7 +1,5 @@
 package model;
 
-import datainterface.InterfaceBD;
-
 public class Chefe extends Funcionario {
 	private float salarioBase;
 	private float adicionalFuncao;
@@ -42,24 +40,6 @@ public class Chefe extends Funcionario {
 
 	public void setBeneficioTerno(float beneficioTerno) {
 		this.beneficioTerno = beneficioTerno;
-	}
-
-	@Override
-	public void salvarNoBanco() {
-		System.out.println("SALVANDO NO BANCO O OBJETO CHEFE");
-		System.out.println("BD="+toString());
-	}
-
-	@Override
-	public String toString() {
-		return "Chefe [salarioBase=" + salarioBase + ", adicionalFuncao=" + adicionalFuncao + ", beneficioTerno="
-				+ beneficioTerno + ", numRegistro=" + numRegistro + ", nome=" + nome + "]";
-	}
-
-	@Override
-	public void recuperarDoBanco() {
-		// TODO Auto-generated method stub
-		
 	}
 
 
