@@ -9,6 +9,7 @@ public class QuestaoComDica extends QuestaoSimples {
 		this.dica = dica;
 	}
 
+	@Override
 	public String aplicarQuestao() {
 		return "Q: "+super.enunciado+"\n   (DICA): "+this.dica;
 	}

@@ -13,8 +13,9 @@ public class QuestaoMultiplaEscolha extends QuestaoSimples {
 		this.a3 = a3;
 		this.a4 = a4;
 	}
+	@Override
 	public String aplicarQuestao() {
-		return "Q: "+super.enunciado+
+		return "Q: "+super.enunciado+"\n"+
 				"   a) "+a1+"\n"+
 	            "   b) "+a2+"\n"+
 				"   c) "+a3+"\n"+
